@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>COMPUSERVICEPERÚ</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font/flaticon.css">
+
+    <script src=
+    "https://smtpjs.com/v3/smtp.js">
+    </script>
+ 
+    <script type="text/javascript">
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "josecertus2023@gmail.com",
+        Password: "certus2023",
+        To: document.getElementById("email").value,
+        From: "josecertus2023@gmail.com",
+        Subject: document.getElementById("asunto").value, 
+        Body: document.getElementById("mensaje").value, 
+      })
+        .then(function (message) {
+          alert("correo enviado satisfactoriamente")
+        });
+    }
+    </script>
+
+
+</head>
+<body>
+    <header>
+        <section class="header-icons-container">
+            <div class="icons">
+                <a href="#"><span class="fab fa-facebook-f"></span></a>                
+                <a href="#"><span class="fab fa-instagram"></span></a>
+                <a href="#"><span class="fab fa-whatsapp"></span></a>
+                <a href="#"><span class="fab fa-youtube"></span></a>
+            </div>
+        </section>
+        <nav>
+            <section class="nav-logo-container">
+                <a href="#"><img src="" alt="COMPU SERVICE PERÚ"></a>
+            </section>
+            <section class="navbar">                
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="contactenos.html">Contáctenos</a></li>
+                <li><a href="ubicacion.html">Ubícanos</a></li>                                
+        </section>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+        </nav>
+    </header>
+    <main >
+        	
+	<section  >		
+        <div class="container">
+			<h2>Contáctenos</h2>
+			<div class="row">
+				<div class="col">
+					
+					<form id="form" class="form-empresa">
+						<div>
+							<input type="text"  id="nombre" name="nombre" placeholder="Nombre completo">
+						</div>
+						<div>
+							<input type="email" id="email" name="email" placeholder="Correo electrónico">
+						</div> 
+						<div>
+							<input type="text" id="asunto" name="asunto" placeholder="Indique el Asunto">
+						</div>
+						<div>
+							<textarea rows="6" id="mensaje" name="mensaje" placeholder="Escriba su mensaje o comentario"></textarea>
+						</div>
+						<div>
+                            <input type="submit" id="button" class="enviar" value="Enviar mensaje" >							
+                            <input type="hidden" name="_captcha" value="false" >
+                            <input type="hidden" name="_next" value="#" >
+						</div>
+					</form>
+
+                    <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+                    <script type="text/javascript">  emailjs.init('YSWFMR3JAQ6qEVV2V')             </script>
+
+                    <script >
+                            const btn = document.getElementById('button');
+
+                            document.getElementById('form')
+                            .addEventListener('submit', function(event) {
+                            event.preventDefault();
+
+                            btn.value = 'Enviando...';
+
+                            const serviceID = 'default_service';
+                            const templateID = 'template_3curumw';
+
+                            emailjs.sendForm(serviceID, templateID, this)
+                            .then(() => {
+                            btn.value = 'Enviar mensaje';
+                            alert('Mensaje enviado correctamente!');
+                            }, (err) => {
+                            btn.value = 'Enviar mensaje';
+                            alert(JSON.stringify(err));
+                            });
+                            });
+                    </script>
+					
+				</div><!-- col -->
+				<div class="col">
+					
+					<div class="videoWrapper">
+					<iframe width="560" height="315" src="video/compluplaza.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div><!-- col -->
+			</div><!-- row -->
+			
+			
+			<ul class="info-contacto">
+						<li><i class="fas fa-map-marker-alt"></i> Av. Garcilaso de la Vega 1253-Lima 15001, Perú</li>
+						<li><i class="fas fa-envelope"></i> contacto@compuserviceperu.com</li>
+						<li><i class="fas fa-phone"></i> (051)-985511370 </li>
+			</ul>			
+        </div>
+	</section><!-- contactenos -->
+    </main>
+</body>
+</html>
