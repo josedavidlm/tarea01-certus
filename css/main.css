@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto+Slab:400,700|Roboto:400,500,700,900&display=swap');
 /*importar tipo de fuente dese google*/
 
-body {
+.cuerpoestatico {
+    
     font-family: 'Roboto Mono', monospace;
+    
     margin: 0;
     padding: 0;
     position: fixed;
@@ -10,8 +12,25 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #429bee;
+    
+    background: linear-gradient(
+    90deg,
+    rgba(85, 140, 190) 25%,
+    rgb(13,79,151,1.000) 73%);
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+.cuerpomovible {
+    
+    font-family: 'Roboto Mono', monospace;
+
+    background: linear-gradient(
+    90deg,
+    rgba(85, 140, 190) 25%,
+    rgb(13,79,151,1.000) 73%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 
 a {
     text-decoration: none;
@@ -35,7 +54,10 @@ header .header-icons-container {
     width: 100%;
     height: 50px;
     display: grid;
-    background-color: #0D4F97;
+    background: linear-gradient(
+        90deg,
+        rgba(85, 140, 190) 25%,
+        rgb(13,79,151,1.000) 73%);
 }
 header .header-icons-container .icons {    
     width: 200px;
@@ -61,27 +83,27 @@ header .header-icons-container .icons a:hover{
 header .icons span {
     color: #429bee;
 }º
-.menu{
+.menus{
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	display: flex;
 }
-.menu a{
+.menus a{
 	display: block;
 	transition: .5s ease-in-out all;
 }
 
-.menu-main a{
+.menus-main a{
 	color: #333333;
 	padding: 30px 10px;	
 	border-bottom: solid 3px transparent;
 }
-.menu-main a:hover{
+.menus-main a:hover{
 	color: #429bee;	
 	border-bottom: solid 3px #337ab7;
 }
-
+/*
 
 nav  {
     display: grid;
@@ -96,6 +118,7 @@ nav .nav-logo-container img {
     width: 220px;
     margin-top: 10px;
 }
+
 nav .navbar {    
     display: flex;
     align-items: center;
@@ -103,25 +126,15 @@ nav .navbar {
     margin-right: 50px;
     list-style: none;
 
-    /*
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-    */
-
 
 }
 
 nav a{
-	/*display: block;*/
-	transition: .5s ease-in-out all;
-   
-    
+	transition: .5s ease-in-out all;       
 }
+
 nav .navbar a {
-   /* color: black;*/
-    /*border-bottom: 1px solid black;*/
+
 
     color: white;
 	padding: 10px 5px;	
@@ -132,7 +145,7 @@ nav .navbar a:hover{
 	color: #429bee;	
 	border-bottom: solid 3px #429bee;
 }
-
+*/
 .home-main {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
@@ -146,7 +159,7 @@ nav .navbar a:hover{
     display: grid;
     grid-column: 2;
     justify-items: center;
-    height: 450px;
+    height: 410px;
     margin-top: 80px;
 }
 .home-main-text {
@@ -176,16 +189,21 @@ nav .navbar a:hover{
 
 /*página ubicación*/
 #google-map {
-    height: 350px;
+    height: 360px;
+    border:solid 2px #429bee;
   }
 
 .container{	
     margin-top:auto;
 	margin-left:auto;
 	margin-right:auto;
-	padding:0 15px;
-    background-color: #0D4F97;
+	padding:0 15px;    
+    background: linear-gradient(
+        90deg,
+        rgb(13,79,151,1.000) 5%,
+        rgb(13,79,151,1.000) 93%);
     color: #e6e9ed;
+    border:solid 1px #429bee;
 }
 .padded{
 	padding-top: 90px;
@@ -234,10 +252,11 @@ nav .navbar a:hover{
 .form-empresa input:focus,
 .form-empresa textarea:focus{
 	/* focus es el estado cuando el objeto contiene al cursor */
-	border-bottom-color: #C805EA;
+	border-bottom-color: #429bee;
 }
 .form-empresa .enviar{
-	box-sizing: content-box;/* Para que padding incremente el ancho que en submit viene por defecto en border-box */
+    /*
+	box-sizing: content-box;*//* Para que padding incremente el ancho que en submit viene por defecto en border-box */
 	border:none;
 	background-color: #429bee;
 	color: #FFFFFF;
@@ -245,7 +264,7 @@ nav .navbar a:hover{
 	
 }
 .form-empresa .enviar:hover{
-	background-color: #422c46;
+	background-color: #0e39ad;
 }
 .info-contacto{
 	list-style: none;
@@ -265,3 +284,119 @@ nav .navbar a:hover{
 	color: #429bee;
 }
 /* contactenos ********************************************************/
+
+/*nosotros*/
+
+.col-50{
+	flex-basis:50%;
+	flex-grow:0;
+}
+#empresa{
+	background-color: #B9019C;
+	color: #ffffff;
+    font-family: 'Roboto Mono', monospace;
+}
+#empresa a{
+	color: #DFFD00;
+}
+#empresa a:hover{
+	color: #37C3D4;
+	text-decoration: underline;
+}
+.col-centrado-vertical{
+    display: flex;
+    flex-direction: column;
+	justify-content: center;
+}
+
+.img-responsive{
+    /*width: 90%;    */
+    width: 800px;
+    padding-left: 60px;
+
+}
+.titulonosotros{    
+    padding-top: 15px;
+	color: #429bee;
+    height: 40px;
+    padding-bottom: 35px;
+}
+.parrafo{
+    padding-top: 60px;
+    
+    text-align: center;
+    text-justify: distribute;
+
+}
+p{
+    padding-bottom: 15px;
+}
+
+/*servicios*/
+
+.img-responsives{
+	width: 350px;
+    height: 220px;
+}
+
+.container-fluid{
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+}
+
+.col-foto{
+	width: 33.33%;
+	flex-basis: auto;
+	overflow: hidden;
+}
+.col-foto img{
+	transition: .5s ease-in-out all;
+}
+.col-foto img:hover{
+	transform: scale(1.3,1.3) rotate(-15deg);
+}
+.container-fluid{
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+}
+aside{
+    background-color:#397ebe;
+    width:18%;
+     color:#14d5db;
+    float:left;
+    border-radius: 15px;
+   }
+html, body {
+    font-family:Verdana, Geneva, sans-serif;
+    font-weight:bold;
+    background-color:#004085;
+    }
+
+section,aside,article,nav
+	{
+	margin:1%;
+	}
+.section{
+        float:right;
+       background-color:#397ebe;
+       border-radius: 15px ;
+        width:78%;
+        color:#FFF;
+        }
+.parrafonostros{
+   padding-top: 1px;
+   padding-bottom: 10px;
+   color:white;    
+   text-justify: distribute;        
+}
+.aviso{
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    text-justify:auto;
+}
